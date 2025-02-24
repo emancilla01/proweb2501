@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Ventas</title>
+    
+</head>
+<body onload="ver('https://proweb2501v2.test/inicio.html')">
+    
+    <div>
+        <h1>Sistema de Ropa</h1>
+    </div>
+    <div>
+        <ul>
+            <li><button onclick="ver('https://proweb2501v2.test/camisas/camisas.html')">Camisas</button></li>
+            <li><button onclick="ver('https://proweb2501v2.test/pantalones/pantalones.html')">Pantalones</button></li>
+            <li><button onclick="ver('https://proweb2501v2.test/playeras/playeras.html')">Playeras</button></li>
+
+        </ul>
+    </div>
+    <!--<button onclick="ver('https://proweb2501v2.test/inicio.html')">Traer Pagina</button>-->
+    <div id="cont1">
+        
+    </div>
+    <div>
+        <a href="https://walmart.com" target="_blank">Walmart</a>
+    </div>
+</body>
+<script>
+    function ver(url) {
+        div1 = document.querySelector("#cont1");
+        fetch (url)
+            .then (response => response.text())
+            .then (data => {div1.innerHTML = data });
+    }
+</script>
+</html>
